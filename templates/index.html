@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Téléchargeur de Vidéos Multi-Plateformes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Téléchargeur de Vidéos <span>Multi-Plateformes</span></h1>
+            <p>Téléchargez des vidéos depuis YouTube, Facebook, Twitter, TikTok, Instagram et bien plus encore!</p>
+        </header>
+
+        <main>
+            <div class="download-card">
+                <div class="input-group">
+                    <input type="text" id="video_url" placeholder="Collez le lien de la vidéo ici..." required>
+                    <button id="download_btn">Télécharger</button>
+                </div>
+                
+                <div class="options">
+                    <select id="format">
+                        <option value="best">Meilleure qualité</option>
+                        <option value="mp4">MP4 (720p)</option>
+                        <option value="360">360p</option>
+                        <option value="audio">Audio seulement</option>
+                    </select>
+                </div>
+                
+                <div id="progress_container" class="hidden">
+                    <div class="progress-bar">
+                        <div id="progress" class="progress"></div>
+                    </div>
+                    <span id="progress_text">0%</span>
+                </div>
+                
+                <div id="message" class="hidden"></div>
+            </div>
+            
+            <div class="supported-platforms">
+                <h2>Plateformes supportées</h2>
+                <div class="platforms-grid">
+                    <div class="platform"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">YouTube</div>
+                    <div class="platform"><img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook">Facebook</div>
+                    <div class="platform"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter">Twitter</div>
+                    <div class="platform"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046126.png" alt="TikTok">TikTok</div>
+                    <div class="platform"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">Instagram</div>
+                    <div class="platform"><img src="https://cdn-icons-png.flaticon.com/512/145/145808.png" alt="Pinterest">Pinterest</div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <div class="affiliation">
+                <p>Ce service est fièrement affilié à †།┼•🔥⃞𝐇𝐀𝐙𝐀𝐑𝐃 𝐄'𝐈𝐒𝐊🔥𓆪✿</p>
+                <p>Source: <strong>Hazard E'isk Digital Solutions</strong></p>
+            </div>
+            <p>© 2023 Téléchargeur de Vidéos Multi-Plateformes. Tous droits réservés.</p>
+        </footer>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+  </html>
