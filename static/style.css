@@ -1,0 +1,234 @@
+:root {
+    --primary: #FF4757;
+    --secondary: #3742FA;
+    --background: #F1F2F6;
+    --text: #2F3542;
+    --success: #2ED573;
+    --accent: #FF6B7A;
+    --card-bg: #FFFFFF;
+    --border-radius: 12px;
+    --box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header h1 span {
+    color: var(--primary);
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.download-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 30px;
+    margin-bottom: 40px;
+}
+
+.input-group {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.input-group input:focus {
+    border-color: var(--secondary);
+}
+
+.input-group button {
+    padding: 0 25px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.input-group button:hover {
+    background-color: #FF6B7A;
+}
+
+.options {
+    margin-bottom: 20px;
+}
+
+.options select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    outline: none;
+}
+
+.progress-container {
+    margin: 20px 0;
+    display: none;
+}
+
+.progress-bar {
+    height: 10px;
+    background-color: #eee;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.progress {
+    height: 100%;
+    background-color: var(--success);
+    width: 0%;
+    transition: width 0.3s;
+}
+
+#progress_text {
+    display: block;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+#message {
+    padding: 15px;
+    border-radius: var(--border-radius);
+    margin-top: 20px;
+    display: none;
+}
+
+#message.success {
+    background-color: rgba(46, 213, 115, 0.2);
+    color: var(--success);
+    display: block;
+}
+
+#message.error {
+    background-color: rgba(255, 71, 87, 0.2);
+    color: var(--primary);
+    display: block;
+}
+
+.supported-platforms {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.supported-platforms h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.platforms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.platform {
+    background-color: var(--card-bg);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.platform:hover {
+    transform: translateY(-5px);
+}
+
+.platform img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.affiliation {
+    background-color: rgba(255, 107, 122, 0.1);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+    border-left: 4px solid var(--accent);
+}
+
+.affiliation p:first-child {
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .input-group {
+        flex-direction: column;
+    }
+    
+    .input-group input {
+        border-radius: var(--border-radius);
+        margin-bottom: 10px;
+    }
+    
+    .input-group button {
+        border-radius: var(--border-radius);
+        padding: 15px;
+    }
+    
+    .platforms-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
