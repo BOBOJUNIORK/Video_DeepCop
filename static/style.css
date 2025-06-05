@@ -231,4 +231,34 @@ footer {
     .platforms-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    .download-button {
+    display: none;
+    background-color: var(--success);
+    color: white;
+    padding: 12px 24px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+    .download-button:hover {
+    background-color: #25b864;
+}
+
+#download_result {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#video_title {
+    margin-bottom: 15px;
+    color: var(--text);
+    font-size: 1.2rem;
+}
+
+    .hidden {
+    display: none !important;
+}
   }
